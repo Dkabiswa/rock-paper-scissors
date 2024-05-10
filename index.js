@@ -13,31 +13,50 @@ function rounds() {
     
 }
 
-function decideWinner (choice1, choice2) {
-    switch (choice1) {
-        case "rock":
-            return choice2 === "paper" ? true : false
-        case "paper":
-            return choice2 === "scissors" ? true : false
-        case "scissors":
-            return choice2 === "rock" ? true : false
+function decideChoice1Result (choice1, choice2) {
+    const rules = {
+        rock: {
+            rock: "repeat",
+            paper: "lose",
+            scissors: "win"
+        },
+        paper: {
+            rock: "win",
+            paper: "repeat",
+            scissors: "lose"
+        },
+        scissors: {
+            rock: "lose",
+            paper: "win",
+            scissors: "repeat"
+        }
     }
+    return rules[choice1][choice2]
 }
 
-function play() {
+function playRound() {
     const player2choice = getPlayer2Choice()
     const player1choice = getPlayer1Choice()
 
     console.log("Computer", player1choice)
     console.log("You", player2choice)
 
-    const player2wins = (player1choice, player2choice)
+    const choice1Result = decideChoice1Result(player1choice, player2choice)
 
-    if(player2wins) {
-        console.log("Computer wins")
-    } else {
-        console.log("You win")
+    switch (choice1Result) {
+        case "win":
+            console.log("Computer wins")
+            break;
+        case "lose":
+            console.log("You wins")
+            break;
+        case "repeat":
+            console.log("Repeat")
+            playRound()
+            break;
+        default:
+            break;
     }
 }
 
-play()
+playRound()
