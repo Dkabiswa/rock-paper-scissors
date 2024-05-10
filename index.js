@@ -1,3 +1,6 @@
+let player1Wins = 0
+let player2Wins = 0
+
 function getPlayer1Choice() {
     const options = ["rock", "paper", "scissors"]
     const randomValue = Math.floor(Math.random() * 3)
@@ -5,8 +8,8 @@ function getPlayer1Choice() {
 }
 
 function getPlayer2Choice() {
-    const sign = window.prompt("Enter your choice");
-    return sign
+    const sign = window.prompt("Enter your choice: rock, paper scissors");
+    return sign.trim().toLowerCase()
 }
 
 function rounds() {
@@ -34,7 +37,7 @@ function decideChoice1Result (choice1, choice2) {
     return rules[choice1][choice2]
 }
 
-function playRound() {
+function playRound(round) {
     const player2choice = getPlayer2Choice()
     const player1choice = getPlayer1Choice()
 
@@ -45,18 +48,31 @@ function playRound() {
 
     switch (choice1Result) {
         case "win":
-            console.log("Computer wins")
+            player1Wins += 1
+            console.log(`Computer wins round ${round}`);
             break;
         case "lose":
-            console.log("You wins")
+            player2Wins += 1
+            console.log(`You win round ${round}`);
             break;
         case "repeat":
-            console.log("Repeat")
-            playRound()
+            console.log("Its a tie, repeat");
+            playRound(round)
             break;
         default:
             break;
     }
 }
 
-playRound()
+
+function playGame(n=5) {
+    let counter = 0
+    while(counter < n) {
+        playRound(counter+1)
+        counter++
+    }
+    const winnerText = player1Wins > player2Wins ? "Computer Wins" : "You win"
+    console.log(winnerText);
+}
+
+playGame()
