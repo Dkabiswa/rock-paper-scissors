@@ -9,11 +9,17 @@ function getPlayer1Choice() {
 
 function getPlayer2Choice() {
     const sign = window.prompt("Enter your choice: rock, paper scissors");
-    return sign.trim().toLowerCase()
+    const input = sign.trim().toLowerCase()
+    const isValid = validateInput(input)
+    if(!isValid) {
+        return getPlayer2Choice()
+    }
+    return input
 }
 
-function rounds() {
-    
+function validateInput(input) {
+    const options = ["rock", "paper", "scissors"]
+    return options.includes(input)
 }
 
 function decideChoice1Result (choice1, choice2) {
