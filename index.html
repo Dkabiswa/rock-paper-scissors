@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Welcome to Rock Paper and Scissors</h2>
-    <p>Open the console to see results</p>
+    <main class="text-center">
+        <h2>Welcome to Rock Paper and Scissors</h2>
+        <p>Open the console to see results</p>
+
+        <div class="game-container">
+            <div class="top flex">
+                <div class="player-1 flex-1">
+                    <span class="count">0</span>
+                    <span class="user">You</span>
+                </div>
+                <div class="player-vs flex-1 text-center">
+                    <p class="vs">VS</p>
+                    <span class="winner-text">Best of 5 wins</span>
+                </div>
+                <div class="player-2 flex-1 ">
+                    <span class="user">Computer</span>
+                    <span class="count">0</span>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
