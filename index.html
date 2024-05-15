@@ -6,25 +6,29 @@
     <title>Document</title>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
-    <main class="text-center">
-        <h2>Welcome to Rock Paper and Scissors</h2>
-        <p>Open the console to see results</p>
+    <main class="text-center py-10">
+        <h2 class="mb-4 heading-1 color-white">Welcome to Rock Paper and Scissors</h2>
+        
 
-        <div class="game-container">
-            <div class="top flex">
-                <div class="player-1 flex-1">
-                    <span class="count">0</span>
-                    <span class="user">You</span>
+        <div class="game-container px-3">
+            <div class="top flex space-between align-center ">
+                <div class="player-1 ">
+                    <span class="count big-text ">0</span>
+                    <span class="user heading-2 ">You</span>
                 </div>
-                <div class="player-vs flex-1 text-center">
-                    <p class="vs">VS</p>
-                    <span class="winner-text">Best of 5 wins</span>
+                <div class="player-vs  text-center">
+                    <p class="vs big-text color-gray-1">VS</p>
+                    <span class="winner-text heading-2 color-gray">Best of 5 wins</span>
                 </div>
-                <div class="player-2 flex-1 ">
-                    <span class="user">Computer</span>
-                    <span class="count">0</span>
+                <div class="player-2  ">
+                    <span class="user heading-2">Computer</span>
+                    <span class="count big-text ">0</span>
                 </div>
             </div>
         </div>

@@ -81,4 +81,4 @@ function playGame(n=5) {
     console.log(winnerText);
 }
 
-playGame()
+// playGame()

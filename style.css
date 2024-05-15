@@ -15,6 +15,8 @@ body {
     background-image: url("assets/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
 }
 img, picture, video, canvas, svg {
     display: block;
@@ -28,9 +30,11 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .game-container {
     margin: 0 auto;
-    max-width: 500px;
-    border: 1px solid black;
+    max-width: 650px;
+    border: 5px solid rgb(65, 179, 255);
     background-color: #ffffff;
+    border-radius: 30px;
+    padding-bottom: 40px;
 }
 .flex {
     display: flex;
@@ -96,7 +100,15 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .color-black {
-    color: #000000
+    color: #292b2c;
+}
+
+.color-gray {
+    color: #666666
+}
+
+.color-gray-1 {
+    color: #c0c0c0
 }
 
 .mb-1 {
@@ -130,6 +142,25 @@ p, h1, h2, h3, h4, h5, h6 {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+.py-1 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.px-2 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.px-3 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.px-10 {
+    padding-right: 50px;
+    padding-left: 50px;
+}
 .text-center {
     text-align: center;
 }
@@ -142,4 +173,18 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .bold-200 {
     font-weight: 200;
+}
+
+.big-text {
+    font-size: 100px
+}
+
+.heading-1 {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.heading-2 {
+    font-size:24px;
+    font-weight: 600;
 }
