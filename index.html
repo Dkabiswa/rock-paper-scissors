@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <main class="text-center py-10">
@@ -17,19 +17,40 @@
         
 
         <div class="game-container px-3">
-            <div class="top flex space-between align-center ">
-                <div class="player-1 ">
+            <div class="top flex space-between align-center mb-2">
+                <div class="player-1 flex-1 text-left">
                     <span class="count big-text ">0</span>
                     <span class="user heading-2 ">You</span>
                 </div>
-                <div class="player-vs  text-center">
+                <div class="player-vs text-center flex-1">
                     <p class="vs big-text color-gray-1">VS</p>
                     <span class="winner-text heading-2 color-gray">Best of 5 wins</span>
                 </div>
                 <div class="player-2  ">
-                    <span class="user heading-2">Computer</span>
+                    <span class="user heading-2 flex-1">Computer</span>
                     <span class="count big-text ">0</span>
                 </div>
+            </div>
+
+            <div class="player-2-options flex justify-center gap-3 mb-2">
+                <button class="btn btn-selection"> <p><i class="fas fa-hand-back-fist fa-2x"></i></p> Rock</button>
+                <button class="btn btn-selection"> <p><i class="fas fa-hand fa-2x"></i> </p>Paper</button>
+                <button class="btn btn-selection"> <p><i class="fas fa-hand-scissors fa-2x"></i> </p>Scissors</button>
+            </div>
+
+            <div class="player-2-options flex space-around mb-2">
+                <button class="btn btn-selection active"> <p><i class="fas fa-hand-back-fist fa-2x"></i></p> Rock</button>
+                <button class="btn btn-selection active"> <p><i class="fas fa-hand-scissors fa-2x"></i> </p>Scissors</button>
+            </div>
+
+            <div class="player-2-options justify-center  mb-2">
+                <button class="btn  btn-solid"> Start New Game</button>
+            </div>
+
+            <div class="round text-center">
+                <h3 class="heading-2">Round 1</h3>
+                <div><span>Scissors <i class="fas fa-hand-scissors"></i> </span>&nbsp; vs &nbsp;<span>Paper <i class="fas fa-hand"></i></span></div>
+                <p class="color-gray text-small">Achilles picked paper but lost to scissors!</p>
             </div>
         </div>
     </main>

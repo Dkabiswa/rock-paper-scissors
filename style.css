@@ -30,11 +30,14 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .game-container {
     margin: 0 auto;
-    max-width: 650px;
+    max-width: 600px;
     border: 5px solid rgb(65, 179, 255);
     background-color: #ffffff;
     border-radius: 30px;
     padding-bottom: 40px;
+}
+.player-vs {
+    /* width: 20%; */
 }
 .flex {
     display: flex;
@@ -82,13 +85,23 @@ p, h1, h2, h3, h4, h5, h6 {
     border: none;
 }
 .btn-solid {
-    background-color: #edae00;
+    background-color: #5cb95c;
     color: #ffffff;
 }
 .btn-outline {
     background-color: transparent;
     color: #ffffff;
     border: 1px solid white;
+}
+
+.btn-selection {
+    min-width: 100px;
+    padding: 25px 20px;
+}
+
+.btn-selection:hover, .btn-selection:active,  .btn-selection.active{
+    background-color: rgb(65, 179, 255);
+    color: white;
 }
 
 .color-primary {
@@ -169,6 +182,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .text-right {
     text-align: right;
+}
+.text-small {
+    font-size: 12px;
 }
 
 .bold-200 {
