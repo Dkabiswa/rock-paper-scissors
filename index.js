@@ -1,5 +1,6 @@
 let player1Wins = 0
 let player2Wins = 0
+let round = 0
 
 function getPlayer1Choice() {
     const options = ["rock", "paper", "scissors"]
@@ -84,25 +85,27 @@ function playGame(n=5) {
 // playGame()
 let selected = ""
 
-const btnRock = document.querySelector("#btnRock");
-const btnPaper = document.querySelector("#btnPaper");
-const btnScissors = document.querySelector("#btnScissors");
-
 const startGame = document.querySelector("#startGame");
 const player2Selection = document.querySelector("#player2Selection");
 
-const optionsContainer = document.querySelector(".player-2-options ")
+const optionsContainer = document.querySelector(".player-2-options")
 const resultsContainer = document.querySelector("#round-results");
 
-const iconHTML = '<p><i class="fas fa-hand-back-fist fa-2x"></i></p>';
-const text = 'Rock';
-const content = `${iconHTML} ${text}`;
+const optionsButtons = document.querySelectorAll(".player-2-options button");
 
+optionsButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+        // Hide/show containers
+        optionsContainer.classList.toggle("hide");
+        resultsContainer.classList.toggle("hide");
 
-btnRock.addEventListener("click", (e) => {
-    optionsContainer.classList.toggle("hide")
-    resultsContainer.classList.toggle("hide")
-    player2Selection.innerHTML = content
+        // Get button's data
+        const selection = button.dataset.selection;
+        const { iconHTML, text } = displaySelected(selection);
+
+        // Update player 2 selection
+        player2Selection.innerHTML = `${iconHTML} ${text}`;
+    });
 });
 
 startGame.addEventListener("click", (e) => {
@@ -113,15 +116,20 @@ startGame.addEventListener("click", (e) => {
 function displaySelected(choice) {
     switch (choice) {
         case "rock":
-            return `<p><i class="fas fa-hand-back-fist fa-2x"></i></p> Rock`
+            return {
+                iconHTML: '<p><i class="fas fa-hand-back-fist fa-2x"></i></p>',
+                text: 'Rock'
+            }
         case "paper":
-            player2Wins += 1
-            console.log(`You win round ${round}`);
-            break;
+            return {
+                iconHTML: '<p><i class="fas fa-hand fa-2x"></i></p>',
+                text: 'Paper'
+            }
         case "scissors":
-            console.log("Its a tie, repeat");
-            playRound(round)
-            break;
+            return {
+                iconHTML: '<p><i class="fas fa-hand-scissors fa-2x"></i></p>',
+                text: 'Scissors'
+            }
         default:
             break;
     }
