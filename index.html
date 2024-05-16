@@ -32,22 +32,28 @@
                 </div>
             </div>
 
-            <div class="player-2-options flex justify-center gap-3 mb-2">
-                <button class="btn btn-selection"> <p><i class="fas fa-hand-back-fist fa-2x"></i></p> Rock</button>
-                <button class="btn btn-selection"> <p><i class="fas fa-hand fa-2x"></i> </p>Paper</button>
-                <button class="btn btn-selection"> <p><i class="fas fa-hand-scissors fa-2x"></i> </p>Scissors</button>
+            <div class="player-2-options hide flex justify-center gap-3 mb-2">
+                <button class="btn btn-selection" id="btnRock"> <p><i class="fas fa-hand-back-fist fa-2x"></i></p> Rock</button>
+                <button class="btn btn-selection" id="btnPaper"> <p><i class="fas fa-hand fa-2x"></i> </p>Paper</button>
+                <button class="btn btn-selection" id="btnScissors"> <p><i class="fas fa-hand-scissors fa-2x"></i> </p>Scissors</button>
             </div>
 
-            <div class="player-2-options flex space-around mb-2">
-                <button class="btn btn-selection active"> <p><i class="fas fa-hand-back-fist fa-2x"></i></p> Rock</button>
-                <button class="btn btn-selection active"> <p><i class="fas fa-hand-scissors fa-2x"></i> </p>Scissors</button>
+            <div class="selected flex hide space-around mb-2" id="round-results">
+                <button class="btn btn-selection active" id="player2Selection"> </button>
+                <button class="btn btn-selection active" id="player1Selection"> <p><i class="fas fa-hand-scissors fa-2x"></i> </p>Scissors</button>
             </div>
 
-            <div class="player-2-options justify-center  mb-2">
-                <button class="btn  btn-solid"> Start New Game</button>
+            <div class="flex justify-center  mb-2">
+                <button class="btn  btn-solid" id="startGame"> Start New Game</button>
             </div>
 
-            <div class="round text-center">
+            <div class="round text-center hide mb-4">
+                <h3 class="heading-2">Round 1</h3>
+                <div><span>Scissors <i class="fas fa-hand-scissors"></i> </span>&nbsp; vs &nbsp;<span>Paper <i class="fas fa-hand"></i></span></div>
+                <p class="color-gray text-small">Achilles picked paper but lost to scissors!</p>
+            </div>
+
+            <div class="round text-center hide mb-4">
                 <h3 class="heading-2">Round 1</h3>
                 <div><span>Scissors <i class="fas fa-hand-scissors"></i> </span>&nbsp; vs &nbsp;<span>Paper <i class="fas fa-hand"></i></span></div>
                 <p class="color-gray text-small">Achilles picked paper but lost to scissors!</p>

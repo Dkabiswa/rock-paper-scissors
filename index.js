@@ -82,3 +82,49 @@ function playGame(n=5) {
 }
 
 // playGame()
+let selected = ""
+
+const btnRock = document.querySelector("#btnRock");
+const btnPaper = document.querySelector("#btnPaper");
+const btnScissors = document.querySelector("#btnScissors");
+
+const startGame = document.querySelector("#startGame");
+const player2Selection = document.querySelector("#player2Selection");
+
+const optionsContainer = document.querySelector(".player-2-options ")
+const resultsContainer = document.querySelector("#round-results");
+
+const iconHTML = '<p><i class="fas fa-hand-back-fist fa-2x"></i></p>';
+const text = 'Rock';
+const content = `${iconHTML} ${text}`;
+
+
+btnRock.addEventListener("click", (e) => {
+    optionsContainer.classList.toggle("hide")
+    resultsContainer.classList.toggle("hide")
+    player2Selection.innerHTML = content
+});
+
+startGame.addEventListener("click", (e) => {
+    e.target.classList.toggle("hide")
+    optionsContainer.classList.toggle("hide")
+});
+
+function displaySelected(choice) {
+    switch (choice) {
+        case "rock":
+            return `<p><i class="fas fa-hand-back-fist fa-2x"></i></p> Rock`
+        case "paper":
+            player2Wins += 1
+            console.log(`You win round ${round}`);
+            break;
+        case "scissors":
+            console.log("Its a tie, repeat");
+            playRound(round)
+            break;
+        default:
+            break;
+    }
+}
+
+console.log(selected);
