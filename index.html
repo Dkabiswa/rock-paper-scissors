@@ -19,16 +19,16 @@
         <div class="game-container px-3">
             <div class="top flex space-between align-center mb-2">
                 <div class="player-1 flex-1 text-left">
-                    <span class="count big-text ">0</span>
+                    <span class="count big-text" id="player2Count">0</span>
                     <span class="user heading-2 ">You</span>
                 </div>
                 <div class="player-vs text-center flex-1">
                     <p class="vs big-text color-gray-1">VS</p>
-                    <span class="winner-text heading-2 color-gray">Best of 5 wins</span>
+                    <span class="winner-text heading-2 color-gray">first to 3 wins</span>
                 </div>
                 <div class="player-2  ">
                     <span class="user heading-2 flex-1">Computer</span>
-                    <span class="count big-text ">0</span>
+                    <span class="count big-text" id="player1Count">0</span>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
 
             <div class="selected flex hide space-around mb-2" id="round-results">
                 <button class="btn btn-selection active" id="player2Selection"> </button>
-                <button class="btn btn-selection active" id="player1Selection"> <p><i class="fas fa-hand-scissors fa-2x"></i> </p>Scissors</button>
+                <button class="btn btn-selection active" id="player1Selection"> </button>
             </div>
 
             <div class="flex justify-center  mb-2">

@@ -124,6 +124,13 @@ p, h1, h2, h3, h4, h5, h6 {
     color: #c0c0c0
 }
 
+.color-green {
+    color: rgb(44, 156, 44)
+}
+
+.color-red {
+    color: rgb(212, 48, 48)
+}
 .mb-1 {
     margin-bottom: 5px;
 }
